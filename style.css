@@ -81,20 +81,20 @@ body {
     border-radius: 50%;
 }
 .topbutton:nth-child(1) {
-    background: rgb(216, 74, 74);
+    background: rgb(255, 77, 77);
 }
 
 .topbutton:nth-child(2) {
-    background: rgb(232, 195, 74);
+    background: rgb(255, 213, 76);
     margin-left: 5px;
     margin-right: 5px;
 }
 
 .topbutton:nth-child(3) {
-    background: rgb(106, 215, 78);
+    background: rgb(120, 255, 86);
 }
 .topbutton:hover {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 #shell {
     display: flex;
@@ -103,9 +103,7 @@ body {
 
     width: calc(100% - 28px);
     height: 100%;
-
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: scroll;
 
     padding-left: 28px;
 }
