@@ -35,7 +35,7 @@ addEventListener("click", function (event) {
             full = false;
         } else {
             document.getElementById("window").style.width = "100%";
-            document.getElementById("window").style.height = "calc(100% - 28px)";
+            document.getElementById("window").style.height = "100%";
             full = true;
         }
     }

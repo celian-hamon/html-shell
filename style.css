@@ -11,6 +11,7 @@
     color: var(--text-color);
     font-weight: 500;
     transition: all 0.3s;
+    overflow: hidden;
 }
 
 body {
@@ -81,6 +82,7 @@ body {
     border-radius: 50%;
 }
 .topbutton:nth-child(1) {
+    margin-left: 7px;
     background: rgb(255, 77, 77);
 }
 
@@ -118,7 +120,7 @@ body {
     flex-direction: row;
     width: 100%;
     height: 20px;
-    padding: 4px 8px 12px 8px;
+    padding: 4px 0 12px 8px;
 }
 input {
     width: calc(100% - 20px);
