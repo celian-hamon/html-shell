@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+:root {
+    --text-color: rgba(240, 248, 255, 0.925);
+    --green: #7dff7d;
+}
 * {
     margin: 0;
     padding: 0;
     font-family: "Fira Code", monospace;
     font-size: 16px;
-    color: rgba(240, 248, 255, 0.925);
+    color: var(--text-color);
     font-weight: 500;
     transition: all 0.3s;
 }
@@ -29,7 +33,6 @@ body {
     background-size: 1200% 1200%;
 
     -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
     animation: AnimationName 30s ease infinite;
 }
 .first {
@@ -44,9 +47,15 @@ body {
         #ff2f00
     );
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 1400% 1400%;
+    -webkit-animation: AnimationName 8s ease infinite;
     animation: AnimationName 8s ease infinite;
+}
+.lang {
+    display: flex;
+    flex-direction: row;
 }
 
 .window {
@@ -140,10 +149,21 @@ img {
     height: 16px;
 }
 p {
+    -webkit-animation: spawn 0.3s;
     animation: spawn 0.3s;
 }
 .despawn {
     animation: spawn 0.3s reverse;
+}
+@-webkit-keyframes spawn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 @keyframes spawn {
     0% {
@@ -157,17 +177,6 @@ p {
 }
 
 @-webkit-keyframes AnimationName {
-    0% {
-        background-position: 0% 5%;
-    }
-    50% {
-        background-position: 100% 96%;
-    }
-    100% {
-        background-position: 0% 5%;
-    }
-}
-@-moz-keyframes AnimationName {
     0% {
         background-position: 0% 5%;
     }
@@ -195,7 +204,17 @@ p {
     border-radius: 50%;
     width: 10px;
     height: 10px;
+    -webkit-animation: spin 0.3s linear infinite;
     animation: spin 0.3s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes spin {
@@ -204,6 +223,41 @@ p {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rainbowText {
+    0% {
+        color: #00ffbd;
+    }
+    10% {
+        color: #00dbff;
+    }
+    20% {
+        color: #0054ff;
+    }
+    30% {
+        color: #9800ff;
+    }
+    40% {
+        color: #fd00ff;
+    }
+    50% {
+        color: #ff007a;
+    }
+    60% {
+        color: #ff2f00;
+    }
+    70% {
+        color: #00ffbd;
+    }
+    80% {
+        color: #00dbff;
+    }
+    90% {
+        color: #0054ff;
+    }
+    100% {
+        color: #9800ff;
     }
 }
 @keyframes rainbowText {
