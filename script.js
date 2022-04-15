@@ -85,10 +85,10 @@ async function runCommand(input) {
         case "skills":
             for (var i = 0; i < skills.length; i++) {
                 if (i == skills.length - 1) {
-                    shell.innerHTML += `< p > └──<img src="${skills[i].value}" alt="${skills[i].name} icon" /> ${skills[i].name}</p > `;
+                    shell.innerHTML += `<p> └──<img src="${skills[i].value}" alt="${skills[i].name} icon" /> ${skills[i].name}</p>`;
                     break
                 }
-                shell.innerHTML += `< p > ├──<img src="${skills[i].value}" alt="${skills[i].name} icon" /> ${skills[i].name}</p > `;
+                shell.innerHTML += `<p> ├──<img src="${skills[i].value}" alt="${skills[i].name} icon" /> ${skills[i].name}</p>`;
             }
             return
         case "projects":
