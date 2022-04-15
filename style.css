@@ -3,6 +3,10 @@
     --text-color: rgba(240, 248, 255, 0.925);
     --green: #7dff7d;
 }
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
 * {
     margin: 0;
     padding: 0;
@@ -82,7 +86,7 @@ body {
     border-radius: 50%;
 }
 .topbutton:nth-child(1) {
-    margin-left: 7px;
+    margin-left: 12px;
     background: rgb(255, 77, 77);
 }
 
@@ -103,11 +107,11 @@ body {
     justify-content: flex-end;
     flex-direction: column;
 
-    width: calc(100% - 28px);
+    width: calc(100% - 33px);
     height: 100%;
     overflow: scroll;
 
-    padding-left: 28px;
+    padding-left: 33px;
 }
 .color {
     height: 10px;
@@ -123,7 +127,7 @@ body {
     padding: 4px 0 12px 8px;
 }
 input {
-    width: calc(100% - 20px);
+    width: calc(100% - 25px);
 
     border: none;
     border-radius: 0 0 12px 0;
@@ -139,6 +143,7 @@ input::before {
     margin-right: 8px;
 }
 .inputbefore {
+    margin-left: 5px;
     width: 20px;
     text-align: center;
 
