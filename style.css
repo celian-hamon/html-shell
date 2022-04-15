@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Fira Code", monospace;
+    font-size: 16px;
+    color: rgba(240, 248, 255, 0.925);
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        309deg,
+        #00ffbd,
+        #00dbff,
+        #0054ff,
+        #9800ff,
+        #fd00ff,
+        #ff007a,
+        #ff2f00
+    );
+    background-size: 1200% 1200%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+.first {
+    background: linear-gradient(
+        315deg,
+        #00ffbd,
+        #00dbff,
+        #0054ff,
+        #9800ff,
+        #fd00ff,
+        #ff007a,
+        #ff2f00
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 1400% 1400%;
+    animation: AnimationName 8s ease infinite;
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    height: 80%;
+    border-radius: 12px;
+    background: rgb(20, 20, 20);
+}
+.topbar {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    flex-direction: row;
+}
+.topbutton {
+    transition: all 0.3s;
+    margin: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.topbutton:nth-child(1) {
+    background: rgb(216, 74, 74);
+}
+
+.topbutton:nth-child(2) {
+    background: rgb(232, 195, 74);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.topbutton:nth-child(3) {
+    background: rgb(106, 215, 78);
+}
+.topbutton:hover {
+    opacity: 0.7;
+}
+#shell {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    width: calc(100% - 28px);
+    height: 100%;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    padding-left: 28px;
+}
+.color {
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+}
+.input {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 20px;
+    padding: 4px 8px 12px 8px;
+}
+input {
+    width: calc(100% - 20px);
+
+    border: none;
+    border-radius: 0 0 12px 0;
+
+    background: transparent;
+}
+input:focus {
+    outline: none;
+}
+input::before {
+    content: ">";
+    font-size: 16px;
+    margin-right: 8px;
+}
+.inputbefore {
+    width: 20px;
+    text-align: center;
+
+    color: aliceblue;
+}
+img {
+    width: 16px;
+    height: 16px;
+}
+p {
+    animation: spawn 0.3s;
+}
+.despawn {
+    animation: spawn 0.3s reverse;
+}
+@keyframes spawn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 5%;
+    }
+    50% {
+        background-position: 100% 96%;
+    }
+    100% {
+        background-position: 0% 5%;
+    }
+}
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 5%;
+    }
+    50% {
+        background-position: 100% 96%;
+    }
+    100% {
+        background-position: 0% 5%;
+    }
+}
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 5%;
+    }
+    50% {
+        background-position: 100% 96%;
+    }
+    100% {
+        background-position: 0% 5%;
+    }
+}
+#loader {
+    border: 2.5px solid #dadada;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: spin 0.3s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rainbowText {
+    0% {
+        color: #00ffbd;
+    }
+    10% {
+        color: #00dbff;
+    }
+    20% {
+        color: #0054ff;
+    }
+    30% {
+        color: #9800ff;
+    }
+    40% {
+        color: #fd00ff;
+    }
+    50% {
+        color: #ff007a;
+    }
+    60% {
+        color: #ff2f00;
+    }
+    70% {
+        color: #00ffbd;
+    }
+    80% {
+        color: #00dbff;
+    }
+    90% {
+        color: #0054ff;
+    }
+    100% {
+        color: #9800ff;
+    }
+}
