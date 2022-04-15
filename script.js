@@ -1,3 +1,4 @@
+let full = false
 addEventListener("load", main);
 
 async function main() {
@@ -22,15 +23,27 @@ async function main() {
     shell.innerHTML += "<p class='first'>|__        |--''___|      ,-'</p > ";
     shell.innerHTML += '<p class="first">   `"--...,+""""   `._,.-"</p > ';
 
-    shell.innerHTML += `<p class='first'>Welcome to the shell! If you need help just type it</p > `;
+    shell.innerHTML += `<p class='first'>Welcome to the shell! If you need help just type it <br/>psssst! (the buttons at the top are functionnals ;))</p > `;
 
 
 }
 addEventListener("click", function (event) {
     if (event.target.id == "close") {
         document.body.innerHTML = "";
-    } else if (event.target.id == "shell" || event.target.id == "window") {
+    }
+    if (event.target.id == "shell" || event.target.id == "window") {
         document.getElementById("input").focus();
+    }
+    if (event.target.id == "maximize") {
+        if (full) {
+            document.getElementById("window").style.width = "80%";
+            document.getElementById("window").style.height = "80%";
+            full = false;
+        } else {
+            document.getElementById("window").style.width = "100%";
+            document.getElementById("window").style.height = "100%";
+            full = true;
+        }
     }
 });
 
