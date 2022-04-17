@@ -53,9 +53,9 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 1400% 1400%;
-    -webkit-animation: AnimationName 8s ease infinite;
-    animation: AnimationName 8s ease infinite;
+    background-size: 120% 120%;
+    -webkit-animation: AnimationName 5s ease infinite;
+    animation: AnimationName 5s ease infinite;
 }
 .lang {
     display: flex;
